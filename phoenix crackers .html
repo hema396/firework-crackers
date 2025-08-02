@@ -1,0 +1,147 @@
+<a href="https://www.funwithcrackers.com/"><h1>PHOENIX CRACKERS</h1></a>
+  <img class="Logo"
+  src="phoenix_logo.jpg" alt="phoenix Logo"/>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phoenix Crackers Real-Time Offer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #af2424;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #FFD700;
+      margin-top: 20px;
+      animation: blink 1s infinite;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0.5; }
+    }
+
+    #countdown {
+      font-size: 2.2em;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #00FFCC;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .shop-button {
+      display: inline-block;
+      background-color: #FF4500;
+      color: white;
+      padding: 14px 28px;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px #FF6347;
+    }
+
+    .shop-button:hover {
+      background-color: #d73300;
+      box-shadow: 0 0 20px #FF4500;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+      box-shadow: 0 0 15px #2cd865;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebd5b;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 30px;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo and Title -->
+  <a href="https://www.funwithcrackers.com/">
+    <h1>PHOENIX CRACKERS</h1>
+  </a>
+
+
+  <!-- 🎇 Offer Text -->
+  <h1>🎉 Aadi Mega Offer - Hurry Up! 🎇</h1>
+  <div id="countdown">Loading...</div>
+
+  <!-- 🛒 Shop Now -->
+  <a class="shop-button" href="https://www.funwithcrackers.com" target="_blank">Shop Now</a>
+
+  <!-- 📲 WhatsApp -->
+  <a class="shop-button whatsapp-button"
+     href="https://wa.me/916383659214?text=Hi%20Phoenix%20Crackers%2C%20I%20want%20to%20book%20my%20order%20during%20Aadi%20Offer!"
+     target="_blank">
+     📲 Book on WhatsApp
+  </a>
+
+  <!-- 🔗 Footer -->
+  <div class="footer">
+    Visit us: <a href="https://www.funwithcrackers.com" style="color: #ccc;">www.funwithcrackers.com</a>
+  </div>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    const now = new Date();
+    const todayNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
+
+    let deadline = (now > todayNoon)
+      ? new Date(todayNoon.getTime() + 24 * 60 * 60 * 1000) // tomorrow 12PM
+      : todayNoon; // today 12PM
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+
+      if (diff > 0) {
+        const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerText =
+          `${hrs} hrs ${mins} mins ${secs} secs`;
+      } else {
+        document.getElementById("countdown").innerText = "⛔ Offer Closed!";
+        clearInterval(timer);
+      }
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
+

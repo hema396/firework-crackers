@@ -1,0 +1,32 @@
+.upi-container {
+  background: #f1f3f6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+
+.upi-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.upi-box img {
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.pay-btn {
+  display: inline-block;
+  background: #fb641b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}

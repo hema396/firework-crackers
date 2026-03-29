@@ -1,4 +1,4 @@
-# 💥 BOOM! Fireworks Store — Order Tracking Backend
+#  BOOM! Fireworks Store — Order Tracking Backend
 
 A full Node.js / Express / MongoDB backend for placing and tracking fireworks orders, with a matching frontend tracker page.
 
@@ -27,7 +27,7 @@ fireworks-backend/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```bash
 # 1. Install dependencies
@@ -51,7 +51,7 @@ node scripts/seedOrders.js
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Orders
 
@@ -83,7 +83,7 @@ node scripts/seedOrders.js
 
 ---
 
-## 📦 Example: Place an Order
+##  Example: Place an Order
 
 ```bash
 curl -X POST http://localhost:5000/api/orders \
@@ -97,7 +97,7 @@ curl -X POST http://localhost:5000/api/orders \
   }'
 ```
 
-## 📦 Example: Update Order Status (Admin)
+##  Example: Update Order Status (Admin)
 
 ```bash
 curl -X PUT http://localhost:5000/api/orders/<MONGO_ID>/status \
@@ -107,7 +107,7 @@ curl -X PUT http://localhost:5000/api/orders/<MONGO_ID>/status \
 
 ---
 
-## 📝 Order Status Flow
+##  Order Status Flow
 
 ```
 Order Placed → Payment Confirmed → Packing → Dispatched → Out for Delivery → Delivered
@@ -119,7 +119,7 @@ Every status change is logged to `statusHistory` (the timeline the frontend disp
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 | Variable     | Default                                      | Description                |
 |--------------|----------------------------------------------|----------------------------|
